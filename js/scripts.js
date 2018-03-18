@@ -22,9 +22,30 @@ $(function() {
 			var $columnCardList = $('<ul>').addClass('column-card-list');
 			var $columnDelete = $('<button>').addClass('btn-delete').text('x');
 			var $columnAddCard = $('<button>').addClass('add-card').text('Add a card');
+		
+			$columnDelete.click(function(){
+				self.removeColumn();
+			});
+
+			$columnAddCard click(function(){
+				self.addCard(new Card(prompt('Enter the name of the card')));
+			});
+
+			$column.append($columnTitle)
+					.append($columnDelete)
+					.append($columnAddCard)
+					.append($columnCardList);
+			return $column;
 		}
-
-
 	}
+
+	Column.prototype = {
+		addCard: function(card) {
+			this.$element.children('ul').append(card.$element);
+		},
+		removeColumn: function() {
+			this.$element.remove();
+		}
+	};
 
 });
