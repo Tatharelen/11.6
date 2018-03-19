@@ -27,7 +27,7 @@ $(function() {
 				self.removeColumn();
 			});
 
-			$columnAddCard click(function(){
+			$columnAddCard.click(function(){
 				self.addCard(new Card(prompt('Enter the name of the card')));
 			});
 
@@ -80,7 +80,7 @@ $(function() {
 
 	var board = {
 		name: 'Kanban Board',
-		addColumns: function(column) {
+		addColumn: function(column) {
 			this.$element.append(column.$element);
 			initSortable();
 		},
