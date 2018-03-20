@@ -83,6 +83,7 @@ $(function() {
 		addColumn: function(column) {
 			this.$element.append(column.$element);
 			initSortable();
+			initSortable2();
 		},
 		$element: $('#board .column-container')
 	};
@@ -90,6 +91,13 @@ $(function() {
 	function initSortable() {
 		$('.column-card-list').sortable({
 			conectWith: '.column-card-list',
+			placeholder: 'card-placeholder'
+		}).disableSelection();
+	}
+
+	function initSortable2() {
+		$('.column-container').sortable({
+			conectWith: '.column-container',
 			placeholder: 'card-placeholder'
 		}).disableSelection();
 	}	
