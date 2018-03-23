@@ -80,8 +80,9 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
+	min-height: 150px;
 	padding: 0;
-	margin: 0;		
+	margin: 0;			
 }
 
 .column-container .column .column-card-list .card {
